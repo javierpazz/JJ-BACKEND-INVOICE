@@ -18,12 +18,18 @@ customerRouter.post(
       codCus: 0,
       nameCus: req.body.nameCus,
       emailCus: req.body.emailCus,
+      domcomer: req.body.domcomer,
+      cuit: req.body.cuit,
+      coniva: req.body.coniva,
     });
     const customer = await newCustomer.save();
     res.send({
       _id: customer._id,
       nameCus: customer.nameCus,
       emailCus: customer.emailCus,
+      domcomer: customer.domcomer,
+      cuit: customer.cuit,
+      coniva: customer.coniva,
     });
   })
 );
@@ -36,8 +42,11 @@ customerRouter.post(
   expressAsyncHandler(async (req, res) => {
     const newCustomer = new Customer({
       codCus: 0,
-      nameCus: 'sample name ' + Date.now(),
-      emailCus: 'email ?????????????',
+      nameCus: ' ',
+      emailCus: ' ',
+      domcomer: ' ',
+      cuit: ' ',
+      coniva: ' ',
     });
     const customer = await newCustomer.save();
     res.send({ message: 'Customer Created', customer });
@@ -55,6 +64,9 @@ customerRouter.put(
       customer.codCus = req.body.codCus;
       customer.nameCus = req.body.nameCus;
       customer.emailCus = req.body.emailCus;
+      customer.domcomer = req.body.domcomer;
+      customer.cuit = req.body.cuit;
+      customer.coniva = req.body.coniva;
       await customer.save();
       res.send({ message: 'Customer Updated' });
     } else {

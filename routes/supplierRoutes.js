@@ -17,8 +17,8 @@ supplierRouter.post(
   expressAsyncHandler(async (req, res) => {
     const newSupplier = new Supplier({
       codSup: 0,
-      name: 'sample name ' + Date.now(),
-      email: 'email ?????????????',
+      name: ' ',
+      email: ' ',
     });
     const supplier = await newSupplier.save();
     res.send({ message: 'Supplier Created', supplier });

@@ -23,6 +23,7 @@ productRouter.post(
       category: 'sample category',
       brand: 'sample brand',
       inStock: 0,
+      minStock: 0,
       rating: 0,
       numReviews: 0,
       description: 'sample description',
@@ -84,6 +85,7 @@ productRouter.put(
       product.category = req.body.category;
       product.brand = req.body.brand;
       product.inStock = req.body.inStock;
+      product.minStock = req.body.minStock;
       product.description = req.body.description;
       await product.save();
       res.send({ message: 'Product Updated' });

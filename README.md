@@ -3,5 +3,3 @@
 "# FiltroDeliveryBack" 
 "# FiltroDeliveryBack" 
 "# JPZ-STUTZ" 
-"# JJ" 
-"# JJ-BACKEND-INVOICE" 
